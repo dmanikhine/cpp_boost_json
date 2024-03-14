@@ -1,4 +1,4 @@
 #pragma once
-#include "person.hpp"
+#include "imap.hpp"
 
-boost::json::object person_to_json(Person &p);
+boost::json::object imap_to_json(Timap &im);
