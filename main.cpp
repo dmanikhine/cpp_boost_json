@@ -1,26 +1,25 @@
-#include <boost/json.hpp>
 #include <iostream>
 #include <string>
+#include "smalltools.hpp"
 
 using namespace boost::json;
 
-class Person {
+/* class Person {
 public:
     std::string name;
     int age;
     std::string city;
     bool married;
-
-    // Method to convert the class instance to a JSON object
-    object to_json() const {
+ */
+  /*     object to_json() const {
         object obj;
         obj.emplace("name", name);
         obj.emplace("age", age);
         obj.emplace("city", city);
         obj.emplace("married", married);
         return obj;
-    }
-};
+    } */
+//};
 
 int main() {
     // Create an instance of the class
@@ -31,7 +30,7 @@ int main() {
     person.married = true;
 
     // Convert class instance to JSON object
-    object json_obj = person.to_json();
+    object json_obj = person_to_json(person);
 
     // Serialize JSON object to string
     std::string json_str = serialize(json_obj);
